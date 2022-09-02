@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const mongoClient = require('mongodb').MongoClient;
 
 const indexRouter = require('./routes/index');
 const studentsRouter = require('./routes/students');
@@ -94,3 +95,7 @@ server.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
 });
 
+
+mongoClient.connect('mongodb://localhost:27017/students').then((client) => {
+  console.log('MongoDb Connect successfully!');
+})
