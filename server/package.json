@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development nodemon ./bin/www",
-    "start:prod": "cross-env NODE_ENV=production node ./bin/www"
+    "start:prod": "cross-env NODE_ENV=production node ./bin/www",
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
@@ -20,6 +21,7 @@
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.19",
-    "socket.io": "^4.5.1"
+    "socket.io": "^4.5.1",
+    "swagger-ui-express": "^4.5.0"
   }
 }
